@@ -3,11 +3,12 @@ date: 2015-8-5 22:44
 tags:
 - Hexo
 categories: 学习笔记
-
-
-[Hexo全部命令]: https://github.com/hexojs/site/tree/master/source/docs
 ---
-site/source/docs/generating.md
+
+- [Hexo全部命令]  
+[Hexo全部命令]: https://github.com/hexojs/site/tree/master/source/docs
+- [本文源] 
+[本文源]: https://github.com/hexojs/site/blob/master/source/docs/generating.md
 title: Generating
 ---
 Generate static files with Hexo is quite easy and fast.
