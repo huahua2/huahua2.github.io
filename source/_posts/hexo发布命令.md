@@ -15,8 +15,7 @@ Generate static files with Hexo is quite easy and fast.
 
 ``` bash
 $ hexo generate
-```
-
+``
 ### Watch for File Changes
 
 Hexo can watch for file changes and regenerate files immediately. Hexo will compare SHA1 checksum of files and only write if files changed.
