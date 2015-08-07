@@ -63,7 +63,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: jacman-master
+#theme: jacman-master
+theme: yilia
 stylus:
   compress: true
 
