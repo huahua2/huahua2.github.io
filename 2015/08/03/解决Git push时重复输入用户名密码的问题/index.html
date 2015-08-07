@@ -3,17 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: hello world | HuaHua&#39;s Blog</title>
+  <title>解决Git push时重复输入用户名密码的问题 | HuaHua&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HuaHua's Blog">
-<meta property="og:url" content="http://huahua2.github.io/tags/hello-world/index.html">
+  <meta name="description" content="在windows上使用git来push到github服务器的时候，每次都需要填写用户名/邮箱、密码，很麻烦。最近用hexo写博客，需要频繁的push，每次执行hexo deploy都需要输入用户名、密码验证，不胜其烦，以下方法可以解决。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解决Git push时重复输入用户名密码的问题">
+<meta property="og:url" content="http://huahua2.github.io/2015/08/03/解决Git push时重复输入用户名密码的问题/index.html">
 <meta property="og:site_name" content="HuaHua's Blog">
-<meta property="og:description">
+<meta property="og:description" content="在windows上使用git来push到github服务器的时候，每次都需要填写用户名/邮箱、密码，很麻烦。最近用hexo写博客，需要频繁的push，每次执行hexo deploy都需要输入用户名、密码验证，不胜其烦，以下方法可以解决。">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/5e8cb366jw1e51yjjv0okj20b00b5gmp.jpg">
+<meta property="og:updated_time" content="2015-08-07T09:20:07.094Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HuaHua's Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="解决Git push时重复输入用户名密码的问题">
+<meta name="twitter:description" content="在windows上使用git来push到github服务器的时候，每次都需要填写用户名/邮箱、密码，很麻烦。最近用hexo写博客，需要频繁的push，每次执行hexo deploy都需要输入用户名、密码验证，不胜其烦，以下方法可以解决。">
   
     <link rel="alternative" href="/atom.xml" title="HuaHua&#39;s Blog" type="application/atom+xml">
   
@@ -169,57 +171,118 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-解决Git push时重复输入用户名密码的问题" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/06/02/hello-world/" class="archive-article-date">
-  	<time datetime="2015-06-02T07:58:00.000Z" itemprop="datePublished">6月 2</time>
+    <div class="article-meta">
+      <a href="/2015/08/03/解决Git push时重复输入用户名密码的问题/" class="article-date">
+  	<time datetime="2015-08-02T16:00:00.000Z" itemprop="datePublished">2015-08-03</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/06/02/hello-world/">Hello World</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      解决Git push时重复输入用户名密码的问题
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello-world/">hello world</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
 	</div>
 
-          
+        
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/日志/">日志</a>
+	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在windows上使用git来push到github服务器的时候，每次都需要填写用户名/邮箱、密码，很麻烦。最近用hexo写博客，需要频繁的push，每次执行hexo deploy都需要输入用户名、密码验证，不胜其烦，以下方法可以解决。<br><a id="more"></a></p>
+<h3 id="1-首先添加环境变量：">1.首先添加环境变量：</h3><p><img src="http://ww2.sinaimg.cn/large/5e8cb366jw1e51yjjv0okj20b00b5gmp.jpg" alt=""></p>
+<h3 id="2-在用户文件夹如C:\Users\zhangsan下新建一个名为_netrc的文件">2.在用户文件夹如<code>C:\Users\zhangsan</code>下新建一个名为<code>_netrc</code>的文件</h3><h3 id="3-编辑该文件：">3.编辑该文件：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">machine github.com</span><br><span class="line">login zhangsan</span><br><span class="line">password <span class="number">123456</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/08/05/css3-background/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          css3的background属性
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/06/02/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="解决Git push时重复输入用户名密码的问题" data-title="解决Git push时重复输入用户名密码的问题" data-url="http://huahua2.github.io/2015/08/03/解决Git push时重复输入用户名密码的问题/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"lghua"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -245,9 +308,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
