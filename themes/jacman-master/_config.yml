@@ -16,12 +16,12 @@ widgets:
 - tag
 - links
 - douban
-- rss
+#- rss
 ## provide seven widgets:category,tag,rss,archive,tagcloud,links,weibo,douban
 
 
 #### RSS 
-rss: /atom.xml ## RSS address.
+#rss: /atom.xml ## RSS address.
 
 #### Image
 imglogo:
@@ -77,14 +77,12 @@ toc:
 ## if you don't want display contents in a specified post,you can modify `front-matter` and add `toc: false`.
 
 #### Links
-# links:
-#   码农圈: https://coderq.com,一个面向程序员交流分享的新一代社区
-#   Jark's Blog: http://wuchong.me
-
-
+links:
+   蓝海健康云: http://bosjk.com
+#   Jark's Blog: http://wuchong.me,网站描述
 
 #### Comment
-duoshuo_shortname:    ## e.g. wuchong   your duoshuo short name.
+duoshuo_shortname: lghua    ## e.g. wuchong   your duoshuo short name.
 disqus_shortname:     ## e.g. wuchong   your disqus short name.
 
 #### Share button
