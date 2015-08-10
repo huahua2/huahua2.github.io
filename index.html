@@ -54,6 +54,11 @@
 							<div class="ribbon"></div>
 						</div>
 						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
 						
 						<div class="icon-wrap icon-me hide" data-idx="3">
 							<div class="user"></div>
@@ -68,6 +73,8 @@
 					<ul class="tips-inner">
 						<li>菜单</li>
 						<li>标签</li>
+						
+						<li>友情链接</li>
 						
 						
 						<li>关于我</li>
@@ -107,16 +114,28 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/css3/" style="font-size: 20px;">css3</a> <a href="/tags/hello-world/" style="font-size: 10px;">hello world</a>
+						<a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/css3/" style="font-size: 20px;">css3</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/hello-world/" style="font-size: 10px;">hello world</a> <a href="/tags/webapp/" style="font-size: 10px;">webapp</a>
 					</div>
 				</section>
 				
 				
 				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://ued.taobao.org/blog/">淘宝UED</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://isux.tencent.com/">腾讯ISUX</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://bosjk.com">蓝海健康云</a>
+			        
+			        </div>
+				</section>
+				
 
 				
 				
-				<section class="switch-part switch-part3">
+				<section class="switch-part switch-part4">
 				
 					<div id="js-aboutme">热衷研究前端的技术的前端er，在这里与你一起阅读、记录、思考、总结、分享…</div>
 				</section>
@@ -329,7 +348,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>css3的background属性</p>
-<p><img src="/img/wz/1.PNG" style="display:block;"></p>
+<p>用图片作为背景平铺，以封面形式展示</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.main-wrapper</span><span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"><span class="hexcolor">#444</span> <span class="function">url</span>(../img/bg.jpg)</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">background-attachment</span>:<span class="value">fixed</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">background-repeat</span>:<span class="value">no-repeat</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">background-size</span>:<span class="value">cover</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value">center center</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -396,7 +416,7 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
 	</div>
 
       
@@ -408,6 +428,133 @@
       
         <p class="article-more-link">
           <a  href="/2015/08/03/解决Git push时重复输入用户名密码的问题/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-rem" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/10/rem/" class="article-date">
+  	<time datetime="2015-07-10T03:02:00.000Z" itemprop="datePublished">2015-07-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/10/rem/">web app变革之rem</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>转自腾讯ISUX (<a href="http://isux.tencent.com/web-app-rem.html">http://isux.tencent.com/web-app-rem.html</a>)</p>
+<p>&nbsp; &nbsp; rem这是个低调的css单位，近一两年开始崭露头角，有许多同学对rem的评价不一，有的在尝试使用，有的在使用过程中遇到坑就弃用了。但是我对rem综合评价是用来做web app它绝对是最合适的人选之一。</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webapp/">webapp</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/07/10/rem/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-git - 简明指南" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/05/git - 简明指南/" class="article-date">
+  	<time datetime="2015-07-05T14:44:00.000Z" itemprop="datePublished">2015-07-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/05/git - 简明指南/">git - 简明指南</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>转自(<a href="http://rogerdudler.github.io/git-guide/index.zh.html">http://rogerdudler.github.io/git-guide/index.zh.html</a>)</p>
+<h2 id="创建新仓库">创建新仓库</h2><p>创建新文件夹，打开，然后执行 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/07/05/git - 简明指南/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
