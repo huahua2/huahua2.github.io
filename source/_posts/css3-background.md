@@ -6,7 +6,17 @@ categories: 学习笔记
 ---
 css3的background属性
 
-<img src="/img/wz/1.PNG" style="display:block;"/>
+用图片作为背景平铺，以封面形式展示
+
+```css
+.main-wrapper{
+  background:#444 url(../img/bg.jpg);
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center center;
+}
+```
 
 
 

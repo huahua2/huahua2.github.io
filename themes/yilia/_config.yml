@@ -48,10 +48,12 @@ tagcloud: true
 
 #是否开启友情链接
 #不开启——
-friends: false
+#friends: false
 #开启——
-#friends:
-#  蓝海健康云: http://bosjk.com
+friends:
+  淘宝UED: http://ued.taobao.org/blog/
+  腾讯ISUX: http://isux.tencent.com/
+  蓝海健康云: http://bosjk.com
 
 
 #是否开启“关于我”。
