@@ -1,4 +1,4 @@
-title: Hexo发布命令 Generating
+title: Hexo发布命令--Generating
 date: 2015-7-5 22:44
 tags:
 - Hexo
