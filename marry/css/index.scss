@@ -98,6 +98,7 @@ h2{
     &:before{
       opacity:0;
       transform: translateY(-30px) rotateZ(5deg);
+      -webkit-transform: translateY(-30px) rotateZ(5deg);
       animation: fly 1s ease;
       -webkit-animation: fly 1s ease;
     }
