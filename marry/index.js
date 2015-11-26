@@ -24,9 +24,9 @@ $(function() {
                         if(parseInt(n / t * 100) == 100 || D-d > 10000){
                             console.log("加载完毕");
                             $(".heart").addClass('happy');
-                            setTimeout(function(){
-                                $(".loading").remove();
-                            },1000)
+                            //setTimeout(function(){
+                            //    $(".loading").remove();
+                            //},1000)
 
                             //x.fadeOut();
                             //
