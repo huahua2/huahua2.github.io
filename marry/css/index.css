@@ -65,6 +65,7 @@ h2 {
 .heart {
   max-width: 280px;
   text-align: center;
+  background-color: #2C262C;
   margin: 150px auto 0 auto;
   min-height: 80px;
   border-radius: 8px;
@@ -75,7 +76,8 @@ h2 {
   cursor: pointer;
   position: relative;
   transition: all .3s ease;
-  animation: pulse 1.5s linear infinite; }
+  animation: pulse 1.5s linear infinite;
+  -webkit-animation: pulse 1.5s linear infinite; }
   .heart:before {
     content: "❤";
     position: absolute;
@@ -84,7 +86,8 @@ h2 {
   .heart.happy:before {
     opacity: 0;
     transform: translateY(-30px) rotateZ(5deg);
-    animation: fly 1s ease; }
+    animation: fly 1s ease;
+    -webkit-animation: fly 1s ease; }
   .heart.broken {
     color: #aaa;
     position: relative;
@@ -107,7 +110,21 @@ h2 {
   50% {
     transform: scale(1.2);
     color: #A12B2B; } }
+@-webkit-keyframes pulse {
+  50% {
+    transform: scale(1.2);
+    color: #A12B2B; } }
 @keyframes fly {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) rotateZ(15deg); }
+  50% {
+    opacity: .75;
+    transform: scale(4) translateY(-30px) rotateZ(-15deg); }
+  100% {
+    opacity: 0;
+    transform: scale(4) translateY(-50px) rotateZ(15deg); } }
+@-webkit-keyframes fly {
   0% {
     opacity: 0;
     transform: translateY(-20px) rotateZ(15deg); }

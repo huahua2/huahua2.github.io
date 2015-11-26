@@ -74,6 +74,7 @@ h2{
   position:relative;
   transition: all .3s ease;
   animation: pulse 1.5s linear infinite;
+  -webkit-animation: pulse 1.5s linear infinite;
   //animation: fly 1s ease;
   //-webkit-animation-name: pulse, fly;
   //-webkit-animation-duration: 1.3s, 1s;
@@ -98,6 +99,7 @@ h2{
       opacity:0;
       transform: translateY(-30px) rotateZ(5deg);
       animation: fly 1s ease;
+      -webkit-animation: fly 1s ease;
     }
   }
   &.broken{
@@ -125,22 +127,35 @@ h2{
   }
 }
 @keyframes pulse{
-  //30%{
-  //  transform: scale(1.1);
-  //}
+
   50%{
     transform: scale(1.2);
     color:#A12B2B;
   }
-  //70%{
-  //  transform: scale(2);
-  //}
-  //100%{
-  //  transform: scale(2.5);
-  //  color:#A12B2B;
-  //}
+
 }
+@-webkit-keyframes pulse{
+
+          50%{
+            transform: scale(1.2);
+            color:#A12B2B;
+          }
+
+        }
 @keyframes fly{
+  0%{
+    opacity:0; transform: translateY(-20px) rotateZ(15deg);
+  }
+  50%{
+    opacity:.75;
+    transform: scale(4) translateY(-30px) rotateZ(-15deg);
+  }
+  100%{
+    opacity:0;
+    transform: scale(4) translateY(-50px) rotateZ(15deg);
+  }
+}
+@-webkit-keyframes fly{
   0%{
     opacity:0; transform: translateY(-20px) rotateZ(15deg);
   }
