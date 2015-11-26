@@ -70,7 +70,6 @@ h2 {
 .heart {
   max-width: 280px;
   text-align: center;
-  background-color: #2C262C;
   margin: 150px auto 0 auto;
   min-height: 44px;
   border-radius: 8px;
@@ -87,7 +86,9 @@ h2 {
     content: "❤";
     position: absolute;
     color: #A12B2B;
-    opacity: 0; }
+    opacity: 0;
+    animation: fly 1s ease;
+    -webkit-animation: fly 1s ease; }
   .heart.happy:before {
     opacity: 0;
     transform: translateY(-30px) rotateZ(5deg);

@@ -66,8 +66,6 @@ h2{
 .heart{
   max-width: 280px;
   text-align: center;
-  background-color: #2C262C;
-  //min-width: 320px;
   margin: 150px auto 0 auto;
   min-height: 44px;
   border-radius: 8px;
@@ -97,6 +95,8 @@ h2{
     color: #A12B2B;
     opacity:0;
     //animation: fly 5s 2.3s linear  both;
+    animation: fly 1s ease;
+    -webkit-animation: fly 1s ease;
   }
   &.happy{
     //color:#A12B2B;
