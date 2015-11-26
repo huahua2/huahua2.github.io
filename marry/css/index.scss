@@ -157,15 +157,15 @@ h2{
 }
 @-webkit-keyframes fly{
   0%{
-    opacity:0; transform: translateY(-20px) rotateZ(15deg);
+    opacity:0; -webkit-transform: translateY(-20px) rotateZ(15deg);
   }
   50%{
     opacity:.75;
-    transform: scale(4) translateY(-30px) rotateZ(-15deg);
+    -webkit-transform: scale(4) translateY(-30px) rotateZ(-15deg);
   }
   100%{
     opacity:0;
-    transform: scale(4) translateY(-50px) rotateZ(15deg);
+    -webkit-transform: scale(4) translateY(-50px) rotateZ(15deg);
   }
 }
 @keyframes break-left{
