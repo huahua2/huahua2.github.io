@@ -62,12 +62,17 @@ h2 {
   background-color: #2C262C;
   padding: 0 30px; }
 
+.loadingtext {
+  text-align: center;
+  color: #aaa;
+  font-size: 1.5em; }
+
 .heart {
   max-width: 280px;
   text-align: center;
   background-color: #2C262C;
   margin: 150px auto 0 auto;
-  min-height: 80px;
+  min-height: 44px;
   border-radius: 8px;
   padding: 10px;
   transform: translateZ(0);
