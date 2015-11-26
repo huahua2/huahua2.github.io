@@ -112,7 +112,7 @@ h2 {
     color: #A12B2B; } }
 @-webkit-keyframes pulse {
   50% {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
     color: #A12B2B; } }
 @keyframes fly {
   0% {
