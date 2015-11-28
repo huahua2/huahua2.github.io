@@ -23,13 +23,13 @@ $(function() {
                         console.log(parseInt(n / t * 100) + "%");
                         if(parseInt(n / t * 100) == 100 || D-d > 10000){
                             console.log("加载完毕");
-                            $(".heart").addClass('happy');
+
 
                             //var heart = document.querySelector(".heart");
                            // var loading = document.querySelector(".loading");
                             var lo=$(".loading");
                                 lo.addClass("loadinghide");
-
+                            $(".heart").addClass('happy');
                           var timeo=  setTimeout(function(){
                               lo.remove();
                                 $(".wedding").addClass("weddingplay");

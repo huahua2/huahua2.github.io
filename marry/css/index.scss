@@ -94,7 +94,7 @@ h2{
 .loadingtext{
   padding: 0.5rem 0;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.7em;
 }
 .loadinghide{
 
@@ -142,10 +142,10 @@ h2{
   &.happy{
     &:before{
       opacity:0;
-      transform: translateY(-30px) rotateZ(5deg);
-      -webkit-transform: translateY(-30px) rotateZ(5deg);
-      animation: fly2 1s ease;
-      -webkit-animation: fly2 1s ease;
+      //transform: translateY(-30px) rotateZ(5deg);
+      //-webkit-transform: translateY(-30px) rotateZ(5deg);
+      animation: fly2 2s linear infinite;
+      -webkit-animation: fly2 2s linear infinite;
     }
   }
   //&.broken{
@@ -277,30 +277,41 @@ h2{
   100% {-webkit-transform: scale(1); opacity: 1;}
 }
 
-@keyframes fly2{
-  0%{
-    opacity:0; -webkit-transform: translateY(-20px) rotateZ(15deg);
-  }
-  50%{
-    opacity:.75;
-    -webkit-transform: scale(4) translateY(-30px) rotateZ(-15deg);
-  }
-  100%{
-    opacity:0;
-    -webkit-transform: scale(4) translateY(-50px) rotateZ(15deg);
-  }
-}
+//@keyframes fly2{
+//  0%{
+//    opacity:0; -webkit-transform: translateY(-20px) rotateZ(15deg);
+//  }
+//  50%{
+//    opacity:.75;
+//    -webkit-transform: scale(4) translateY(-30px) rotateZ(-15deg);
+//  }
+//  100%{
+//    opacity:0;
+//    -webkit-transform: scale(4) translateY(-50px) rotateZ(15deg);
+//  }
+//}
 @-webkit-keyframes fly2{
+  //0%{
+  //  opacity:0; -webkit-transform: translateY(-20px) rotateZ(15deg);
+  //}
+  //50%{
+  //  opacity:.75;
+  //  -webkit-transform: scale(4) translateY(-30px) rotateZ(-15deg);
+  //}
+  //100%{
+  //  opacity:0;
+  //  -webkit-transform: scale(4) translateY(-50px) rotateZ(15deg);
+  //}
   0%{
-    opacity:0; -webkit-transform: translateY(-20px) rotateZ(15deg);
+    opacity:0; -webkit-transform:  rotateZ(15deg);
   }
   50%{
     opacity:.75;
-    -webkit-transform: scale(4) translateY(-30px) rotateZ(-15deg);
+    -webkit-transform: scale(4)  rotateZ(-15deg);
   }
   100%{
     opacity:0;
-    -webkit-transform: scale(4) translateY(-50px) rotateZ(15deg);
+    -webkit-transform: scale(10)  rotateZ(15deg);
   }
 }
 @keyframes pulse{
