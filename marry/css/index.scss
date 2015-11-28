@@ -186,7 +186,14 @@ h2{
 
 }
 .weddingplay{
-  -webkit-animation: led_Play 3s  linear forwards;
+ // -webkit-animation: led_Play 3s  linear forwards;
+ // animation: led_Play 1s ease;
+  -webkit-animation-name: led_Play, tiaodong;
+  -webkit-animation-duration: 3s, 2.5s;
+  -webkit-animation-timing-function: linear, linear;
+  -webkit-animation-delay: 0s, 3s;
+  -webkit-animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards, forwards;
 }
 .bottom{
   width: 100%;
@@ -275,6 +282,10 @@ h2{
   0% {-webkit-transform: scale(0); opacity: 0.2;}
   50% {-webkit-transform: scale(0.5); opacity: 0.5;}
   100% {-webkit-transform: scale(1); opacity: 1;}
+}
+@-webkit-keyframes tiaodong {
+  0% {-webkit-transform: scale(1); opacity: 1;}
+  100% {-webkit-transform: scale(1); opacity: 0.1;}
 }
 
 //@keyframes fly2{
