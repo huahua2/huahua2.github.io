@@ -29,6 +29,11 @@ html {
 }
 @media screen and (min-width: 400px) {
   html{
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 430px) {
+  html{
     font-size: 14px;
   }
 }
@@ -174,7 +179,7 @@ h2{
 }
 .bottom{
   width: 100%;
-  background-color: rgba(49,49,49,0.61);
+  background-color: rgba(49,49,49,0.51);
   position: absolute;
   bottom: 0;
   left: 0;
