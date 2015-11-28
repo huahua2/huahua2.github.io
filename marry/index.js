@@ -10,7 +10,7 @@ $(function() {
      n = new Date(),
         d = n.getTime(),
         N = function () {
-            var e = ["http://zhbosdoctor.com/data_upload/resource/home/upload_b45a06232fd284f2a6db42245dc4e637.jpg","http://zhbosdoctor.com/data_upload/resource/home/upload_91ebc46ac8ac22879ff56b464a9e79d4.jpg"],
+            var e = ["imgs/img1.jpg","imgs/img2.jpg","imgs/wedding.png","imgs/married.png","imgs/lefticon.png"],
                 t = e.length,
                 n = 0,
                 r = function (e) {
@@ -23,6 +23,23 @@ $(function() {
                         console.log(parseInt(n / t * 100) + "%");
                         if(parseInt(n / t * 100) == 100 || D-d > 10000){
                             console.log("加载完毕");
+                            $(".heart").addClass('happy');
+
+                            //var heart = document.querySelector(".heart");
+                           // var loading = document.querySelector(".loading");
+                            var lo=$(".loading");
+                                lo.addClass("loadinghide");
+
+                            setTimeout(function(){lo.remove()
+
+                                $(".wedding").addClass("weddingplay");
+                            },2500)
+                            //loading.addEventListener("webkitAnimationEnd", function() {  $(loading).remove();}, false);
+                            //$(heart).addClass('happy');
+
+
+
+
                            // $(".heart").addClass('happy');
                             //setTimeout(function(){
                             //    $(".loading").remove();
@@ -46,5 +63,8 @@ $(function() {
             for (var i = 0; i < t; ++i) r(e[i]);
         }();
 
+    $("#loading_text").click(function(){
+        alert();
+    })
 
 })
