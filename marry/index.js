@@ -30,10 +30,11 @@ $(function() {
                             var lo=$(".loading");
                                 lo.addClass("loadinghide");
 
-                            setTimeout(function(){lo.remove()
-
+                          var timeo=  setTimeout(function(){
+                              lo.remove();
                                 $(".wedding").addClass("weddingplay");
-                            },3000)
+                              clearTimeout(timeo);
+                            },5000)
                             //loading.addEventListener("webkitAnimationEnd", function() {  $(loading).remove();}, false);
                             //$(heart).addClass('happy');
 

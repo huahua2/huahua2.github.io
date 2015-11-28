@@ -70,29 +70,39 @@ h2 {
   bottom: 0;
   right: 0;
   z-index: 90;
-  background-color: #2C262C;
-  padding: 0 30px; }
+  background-color: #732D2D;
+  padding: 0 30px;
+  color: #fff; }
+  .loading p {
+    text-align: center;
+    padding: 0.5rem 0;
+    font-size: 1.3rem; }
+
+.lq {
+  margin-top: 100px;
+  font-size: 1.5rem;
+  text-align: center; }
 
 .loadingtext {
+  padding: 0.5rem 0;
   text-align: center;
-  color: #aaa;
   font-size: 1.5em; }
 
 .loadinghide {
-  animation: hideloading 2s 1s linear;
-  -webkit-animation: hideloading 2s 1s linear; }
+  animation: hideloading 4.5s 1s linear;
+  -webkit-animation: hideloading 4.5s 1s linear; }
 
 .heart {
   max-width: 280px;
   text-align: center;
-  margin: 150px auto 0 auto;
+  margin: 10px auto 0 auto;
   min-height: 44px;
   border-radius: 8px;
   padding: 10px;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
-  color: #aaa;
-  font-size: 3rem;
+  color: #fff;
+  font-size: 4rem;
   cursor: pointer;
   position: relative;
   transition: all .3s ease;
@@ -108,8 +118,8 @@ h2 {
     opacity: 0;
     transform: translateY(-30px) rotateZ(5deg);
     -webkit-transform: translateY(-30px) rotateZ(5deg);
-    animation: fly 1s ease;
-    -webkit-animation: fly 1s ease; }
+    animation: fly2 1s ease;
+    -webkit-animation: fly2 1s ease; }
 
 .wedding {
   background: url(../imgs/wedding.png) no-repeat;
@@ -201,7 +211,7 @@ h2 {
   100% {
     -webkit-transform: scale(1);
     opacity: 1; } }
-@keyframes fly {
+@keyframes fly2 {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-20px) rotateZ(15deg); }
@@ -211,7 +221,7 @@ h2 {
   100% {
     opacity: 0;
     -webkit-transform: scale(4) translateY(-50px) rotateZ(15deg); } }
-@-webkit-keyframes fly {
+@-webkit-keyframes fly2 {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-20px) rotateZ(15deg); }
