@@ -33,7 +33,7 @@ $(function() {
                             setTimeout(function(){lo.remove()
 
                                 $(".wedding").addClass("weddingplay");
-                            },2500)
+                            },3000)
                             //loading.addEventListener("webkitAnimationEnd", function() {  $(loading).remove();}, false);
                             //$(heart).addClass('happy');
 
