@@ -10,7 +10,7 @@ $(function() {
      n = new Date(),
         d = n.getTime(),
         N = function () {
-            var e = ["imgs/img1.jpg","imgs/img2.jpg","imgs/wedding.png","imgs/married.png","imgs/lefticon.png"],
+            var e = ["imgs/img1.jpg","imgs/img2.jpg","imgs/wedding.png","imgs/married.png?v=1","imgs/lefticon.png"],
                 t = e.length,
                 n = 0,
                 r = function (e) {
@@ -23,10 +23,6 @@ $(function() {
                         console.log(parseInt(n / t * 100) + "%");
                         if(parseInt(n / t * 100) == 100 || D-d > 10000){
                             console.log("加载完毕");
-
-
-                            //var heart = document.querySelector(".heart");
-                           // var loading = document.querySelector(".loading");
                             var lo=$(".loading");
                                 lo.addClass("loadinghide");
                             $(".heart").addClass('happy');
