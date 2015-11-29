@@ -104,7 +104,7 @@ h2{
 .heart{
   max-width: 280px;
   text-align: center;
-  margin: 10px auto 0 auto;
+  margin: 20px auto 0 auto;
   min-height: 44px;
   border-radius: 8px;
   padding: 10px;
@@ -118,59 +118,22 @@ h2{
   -webkit-transition: all .3s ease;
   animation: pulse 1.5s linear infinite;
   -webkit-animation: pulse 1.5s linear infinite;
-  //animation: fly 1s ease;
-  //-webkit-animation-name: pulse, fly;
-  //-webkit-animation-duration: 1.3s, 1s;
-  //-webkit-animation-timing-function: linear, ease;
-  //-webkit-animation-delay: 0s, 1s;
-  //-webkit-animation-iteration-count: infinite, infinite;
-  //-webkit-animation-fill-mode: forwards, forwards;
-  //&:hover{
-  //  animation: pulse .6s linear;
-  //}
+
 
   &:before{
     content: "❤";
     position:absolute;
     color: #A12B2B;
     opacity:0;
-    //-webkit-transform:scale(4) translateY(-30px) rotateZ(-15deg);
-    //animation: fly 5s 2.3s linear  both;
-    //animation: fly 1s ease;
-    //-webkit-animation: fly 1s ease;
+
   }
   &.happy{
     &:before{
       opacity:0;
-      //transform: translateY(-30px) rotateZ(5deg);
-      //-webkit-transform: translateY(-30px) rotateZ(5deg);
       animation: fly2 2s linear infinite;
       -webkit-animation: fly2 2s linear infinite;
     }
   }
-  //&.broken{
-  //  color: #aaa;
-  //  position:relative;
-  //  transition: all .3s ease;
-  //
-  //  &:before, &:after{
-  //    content: "❤";
-  //    opacity:1;
-  //    color: #ccc;
-  //    position:absolute;
-  //    top:-150px;
-  //    transform:  scale(3) rotateZ(0);
-  //  }
-  //
-  //  &:before{
-  //    clip: rect(0, 20px, 200px, 0);
-  //    animation: break-left 1s ease forwards;
-  //  }
-  //  &:after{
-  //    clip: rect(0, 50px, 200px, 25px);
-  //    animation: break-right 1s ease forwards;
-  //  }
-  //}
 }
 .wedding{
   background: url(../imgs/wedding.png) no-repeat;
@@ -182,14 +145,12 @@ h2{
   left:50%;
   margin-left:-9.772rem;
   opacity: 0;
-
-
 }
 .weddingplay{
  // -webkit-animation: led_Play 3s  linear forwards;
  // animation: led_Play 1s ease;
   -webkit-animation-name: led_Play, tiaodong;
-  -webkit-animation-duration: 3s, 2.5s;
+  -webkit-animation-duration: 3s, 5s;
   -webkit-animation-timing-function: linear, linear;
   -webkit-animation-delay: 0s, 3s;
   -webkit-animation-iteration-count: 1, infinite;
@@ -273,11 +234,6 @@ h2{
   100% {-webkit-transform: translateX(0);}
 }
 
-//@keyframes bounce {
-//  0% {transform: translateX(-20);}
-//
-//  100% {transform: translateX(20);}
-//}
 @-webkit-keyframes led_Play {
   0% {-webkit-transform: scale(0); opacity: 0.2;}
   50% {-webkit-transform: scale(0.5); opacity: 0.5;}
@@ -285,34 +241,23 @@ h2{
 }
 @-webkit-keyframes tiaodong {
   0% {-webkit-transform: scale(1); opacity: 1;}
-  100% {-webkit-transform: scale(1); opacity: 0.1;}
+  100% {-webkit-transform: scale(1); opacity: 0;}
 }
+@keyframes fly2{
 
-//@keyframes fly2{
-//  0%{
-//    opacity:0; -webkit-transform: translateY(-20px) rotateZ(15deg);
-//  }
-//  50%{
-//    opacity:.75;
-//    -webkit-transform: scale(4) translateY(-30px) rotateZ(-15deg);
-//  }
-//  100%{
-//    opacity:0;
-//    -webkit-transform: scale(4) translateY(-50px) rotateZ(15deg);
-//  }
-//}
+  0%{
+    opacity:0; transform:  rotateZ(15deg);
+  }
+  50%{
+    opacity:.75;  transform: scale(4)  rotateZ(-15deg);
+  }
+  100%{
+    opacity:0;
+   transform: scale(10)  rotateZ(15deg);
+  }
+}
 @-webkit-keyframes fly2{
-  //0%{
-  //  opacity:0; -webkit-transform: translateY(-20px) rotateZ(15deg);
-  //}
-  //50%{
-  //  opacity:.75;
-  //  -webkit-transform: scale(4) translateY(-30px) rotateZ(-15deg);
-  //}
-  //100%{
-  //  opacity:0;
-  //  -webkit-transform: scale(4) translateY(-50px) rotateZ(15deg);
-  //}
+
   0%{
     opacity:0; -webkit-transform:  rotateZ(15deg);
   }
@@ -374,44 +319,3 @@ h2{
   }
 
 }
-
-//@keyframes break-left{
-//  0%{
-//    opacity:1;
-//    transform: scale(3) rotateZ(0);
-//  }
-//  20%{
-//    opacity:.5;
-//    transform: scale(3) translateX(-10px) rotateZ(-20deg) translateY(0) ;
-//  }
-//  50%{
-//    opacity:.5;
-//    transform: scale(3) translateX(-10px) rotateZ(-20deg) translateY(0) ;
-//  }
-//  100%{
-//    opacity:0;
-//    transform: scale(3) translateX(-30px) rotateZ(-25deg) translateY(50px);
-//
-//  }
-//
-//}
-//@keyframes break-right{
-//  0%{
-//    opacity:1;
-//    transform: scale(3) rotateZ(0);
-//  }
-//  20%{
-//    opacity:.5;
-//    transform: scale(3) translateX(10px) rotateZ(20deg) translateY(0) ;
-//  }
-//  50%{
-//    opacity:.5;
-//    transform: scale(3) translateX(10px) rotateZ(20deg) translateY(0) ;
-//  }
-//  100%{
-//    opacity:0;
-//    transform: scale(3) translateX(30px) rotateZ(25deg) translateY(50px);
-//
-//  }
-//
-//}
