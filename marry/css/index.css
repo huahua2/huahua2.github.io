@@ -170,7 +170,7 @@ h2 {
   .content .desc {
     position: absolute;
     bottom: 0;
-    padding: 0 1rem 0 1.3rem; }
+    padding: 0 0 0 1.2rem; }
     .content .desc a {
       color: #fff; }
     .content .desc p {
@@ -181,12 +181,12 @@ h2 {
       .content .desc p span {
         vertical-align: middle; }
         .content .desc p span.font {
-          font-size: 1.2rem; }
+          font-size: 1.1rem; }
       .content .desc p b {
         display: inline-block;
         background: url(../imgs/lefticon.png) no-repeat 0 0;
         background-size: 2.3125rem 10.05rem;
-        width: 2.33rem;
+        width: 2.4rem;
         height: 2.375rem;
         vertical-align: middle;
         margin-right: 0.5rem; }
