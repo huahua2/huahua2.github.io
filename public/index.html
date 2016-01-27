@@ -114,7 +114,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/css3/" style="font-size: 15px;">css3</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/hello-world/" style="font-size: 10px;">hello world</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/webapp/" style="font-size: 15px;">webapp</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+						<a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/css3/" style="font-size: 15px;">css3</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/hello-world/" style="font-size: 10px;">hello world</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/webapp/" style="font-size: 15px;">webapp</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
 					</div>
 				</section>
 				
@@ -189,6 +189,78 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-js闭包使用场景" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/27/js闭包使用场景/" class="article-date">
+  	<time datetime="2016-01-26T16:00:00.000Z" itemprop="datePublished">2016-01-27</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/27/js闭包使用场景/">js闭包使用场景</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我们来看看闭包的用途。事实上，通过使用闭包，我们可以做很多事情。比如模拟面向对象的代码风格；更优雅，更简洁的表达出代码；在某些方面提升代码的执行效率。</p>
+<p>##1 匿名自执行函数</p>
+<p>我们知道所有的变量，如果不加上var关键字，则默认的会添加到全局对象的属性上去，这样的临时变量加入全局对象有很多坏处，<br>比如：别的函数可能误用这些变量；造成全局对象过于庞大，影响访问速度(因为变量的取值是需要从原型链上遍历的)。<br>除了每次使用变量都是用var关键字外，我们在实际情况下经常遇到这样一种情况，即有的函数只需要执行一次，其内部变量无需维护，<br>比如UI的初始化，那么我们可以使用闭包：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> datamodel = &#123;  </span><br><span class="line">    table : [],  </span><br><span class="line">    tree : &#123;&#125;  </span><br><span class="line">&#125;;  </span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">dm</span>)</span>&#123;  </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; dm.table.rows; i++)&#123;  </span><br><span class="line">       <span class="keyword">var</span> row = dm.table.rows[i];  </span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; row.cells; i++)&#123;  </span><br><span class="line">           drawCell(i, j);  </span><br><span class="line">       &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="comment">//build dm.tree</span></span><br><span class="line">&#125;)(datamodel);</span><br></pre></td></tr></table></figure>
+<p>我们创建了一个匿名的函数，并立即执行它，由于外部无法引用它内部的变量，<br>因此在执行完后很快就会被释放，关键是这种机制不会污染全局对象。</p>
+<p>##2缓存</p>
+<p>再来看一个例子，设想我们有一个处理过程很耗时的函数对象，每次调用都会花费很长时间，<br>那么我们就需要将计算出来的值存储起来，当调用这个函数的时候，首先在缓存中查找，如果找不到，则进行计算，<br>然后更新缓存并返回值，如果找到了，直接返回查找到的值即可。闭包正是可以做到这一点，因为它不会释放外部的引用，<br>从而函数内部的值可以得以保留。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> CachedSearchBox = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </span><br><span class="line">    <span class="keyword">var</span> cache = &#123;&#125;,  </span><br><span class="line">       count = [];  </span><br><span class="line">    <span class="keyword">return</span> &#123;  </span><br><span class="line">       attachSearchBox : <span class="function"><span class="keyword">function</span>(<span class="params">dsid</span>)</span>&#123;  </span><br><span class="line">           <span class="keyword">if</span>(dsid <span class="keyword">in</span> cache)&#123;<span class="comment">//如果结果在缓存中  </span></span><br><span class="line">              <span class="keyword">return</span> cache[dsid];<span class="comment">//直接返回缓存中的对象  </span></span><br><span class="line">           &#125;  </span><br><span class="line">           <span class="keyword">var</span> fsb = <span class="keyword">new</span> uikit.webctrl.SearchBox(dsid);<span class="comment">//新建  </span></span><br><span class="line">           cache[dsid] = fsb;<span class="comment">//更新缓存  </span></span><br><span class="line">           <span class="keyword">if</span>(count.length &gt; <span class="number">100</span>)&#123;<span class="comment">//保正缓存的大小&lt;=100  </span></span><br><span class="line">              <span class="keyword">delete</span> cache[count.shift()];  </span><br><span class="line">           &#125;  </span><br><span class="line">           <span class="keyword">return</span> fsb;        </span><br><span class="line">       &#125;,  </span><br><span class="line">       clearSearchBox : <span class="function"><span class="keyword">function</span>(<span class="params">dsid</span>)</span>&#123;  </span><br><span class="line">           <span class="keyword">if</span>(dsid <span class="keyword">in</span> cache)&#123;  </span><br><span class="line">              cache[dsid].clearSelection();    </span><br><span class="line">           &#125;  </span><br><span class="line">       &#125;  </span><br><span class="line">    &#125;;  </span><br><span class="line">&#125;)();  </span><br><span class="line">CachedSearchBox.attachSearchBox(<span class="string">"input1"</span>);</span><br></pre></td></tr></table></figure>
+<p>这样，当我们第二次调用CachedSearchBox.attachSerachBox(“input1”)的时候，<br>我们就可以从缓存中取道该对象，而不用再去创建一个新的searchbox对象。</p>
+<p>##3 实现封装</p>
+<p>可以先来看一个关于封装的例子，在person之外的地方无法访问其内部的变量，而通过提供闭包的形式来访问：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </span><br><span class="line">    <span class="comment">//变量作用域为函数内部，外部无法访问  </span></span><br><span class="line">    <span class="keyword">var</span> name = <span class="string">"default"</span>;      </span><br><span class="line">    <span class="keyword">return</span> &#123;  </span><br><span class="line">       getName : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </span><br><span class="line">           <span class="keyword">return</span> name;  </span><br><span class="line">       &#125;,  </span><br><span class="line">       setName : <span class="function"><span class="keyword">function</span>(<span class="params">newName</span>)</span>&#123;  </span><br><span class="line">           name = newName;  </span><br><span class="line">       &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;();  </span><br><span class="line">print(person.name);<span class="comment">//直接访问，结果为undefined  </span></span><br><span class="line">print(person.getName());  </span><br><span class="line">person.setName(<span class="string">"abruzzi"</span>);  </span><br><span class="line">print(person.getName());  </span><br><span class="line">-</span><br><span class="line">得到结果如下：</span><br><span class="line"><span class="literal">undefined</span></span><br><span class="line"><span class="keyword">default</span></span><br><span class="line">abruzzi</span><br></pre></td></tr></table></figure>
+<p>##4 闭包的另一个重要用途是实现面向对象中的对象，传统的对象语言都提供类的模板机制，这样不同的对象(类的实例)拥有独立的成员及状态，互不干涉。虽然JavaScript中没有类这样的机制，但是通过使用闭包，<br>我们可以模拟出这样的机制。还是以上边的例子来讲：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;  </span><br><span class="line">    <span class="keyword">var</span> name = <span class="string">"default"</span>;      </span><br><span class="line">    <span class="keyword">return</span> &#123;  </span><br><span class="line">       getName : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </span><br><span class="line">           <span class="keyword">return</span> name;  </span><br><span class="line">       &#125;,  </span><br><span class="line">       setName : <span class="function"><span class="keyword">function</span>(<span class="params">newName</span>)</span>&#123;  </span><br><span class="line">           name = newName;  </span><br><span class="line">       &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;;    </span><br><span class="line"><span class="keyword">var</span> john = Person();  </span><br><span class="line">print(john.getName());  </span><br><span class="line">john.setName(<span class="string">"john"</span>);  </span><br><span class="line">print(john.getName());  </span><br><span class="line">- </span><br><span class="line"><span class="keyword">var</span> jack = Person();  </span><br><span class="line">print(jack.getName());  </span><br><span class="line">jack.setName(<span class="string">"jack"</span>);  </span><br><span class="line">print(jack.getName());  </span><br><span class="line">-</span><br><span class="line">运行结果如下：</span><br><span class="line">-</span><br><span class="line"><span class="keyword">default</span></span><br><span class="line">john</span><br><span class="line"><span class="keyword">default</span></span><br><span class="line">jack</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-路漫漫其修远兮" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -631,70 +703,6 @@
 
 
   
-    <article id="post-git - 简明指南" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/05/git - 简明指南/" class="article-date">
-  	<time datetime="2015-07-05T14:44:00.000Z" itemprop="datePublished">2015-07-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/05/git - 简明指南/">git - 简明指南</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>转自(<a href="http://rogerdudler.github.io/git-guide/index.zh.html">http://rogerdudler.github.io/git-guide/index.zh.html</a>)</p>
-<h2 id="创建新仓库">创建新仓库</h2><p>创建新文件夹，打开，然后执行 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/07/05/git - 简明指南/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -705,7 +713,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2015 HuaHua
+    		&copy; 2016 HuaHua
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
