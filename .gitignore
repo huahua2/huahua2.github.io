@@ -14,3 +14,7 @@ marry/.idea/misc.xml
 marry/.idea/modules.xml
 
 marry/.idea/vcs.xml
+.idea
+public/
+node_modules/
+.deploy_git
