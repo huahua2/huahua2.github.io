@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .DS_Store
 Thumbs.db
 db.json
@@ -7,25 +6,3 @@ node_modules/
 public/
 .deploy*/
 *.idea
-=======
-
-marry/.idea/workspace.xml
-
-marry/.idea/watcherTasks.xml
-
-marry/.idea/.name
-
-marry/.idea/dictionaries/huahua.xml
-
-marry/.idea/marry.iml
-
-marry/.idea/misc.xml
-
-marry/.idea/modules.xml
-
-marry/.idea/vcs.xml
-.idea
-public/
-node_modules/
-.deploy_git
->>>>>>> master
