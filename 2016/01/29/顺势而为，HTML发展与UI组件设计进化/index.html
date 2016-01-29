@@ -3,17 +3,47 @@
 <head>
   <meta charset="utf-8">
   
-  <title>HuaHua&#39;s Blog</title>
+  <title>顺势而为，HTML发展与UI组件设计进化 | HuaHua&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HuaHua's Blog">
-<meta property="og:url" content="http://huahua2.github.io/index.html">
+  <meta name="description" content="转自(http://isux.tencent.com/development-of-ui-components-based-on-native-html.html)
+
+在阅读本文之前，建议先阅读之前的一篇文章：“面向设计的半封装web组件开发”，便于理解文章的一些解惑。
+一、现状1. 前端发展现状
+前端这几年的发展都是有目共睹的，然而，如果按照已经落地投入实践的标准梳理下，会发现，基本上都是偏后的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="顺势而为，HTML发展与UI组件设计进化">
+<meta property="og:url" content="http://huahua2.github.io/2016/01/29/顺势而为，HTML发展与UI组件设计进化/index.html">
 <meta property="og:site_name" content="HuaHua's Blog">
-<meta property="og:description">
+<meta property="og:description" content="转自(http://isux.tencent.com/development-of-ui-components-based-on-native-html.html)
+
+在阅读本文之前，建议先阅读之前的一篇文章：“面向设计的半封装web组件开发”，便于理解文章的一些解惑。
+一、现状1. 前端发展现状
+前端这几年的发展都是有目共睹的，然而，如果按照已经落地投入实践的标准梳理下，会发现，基本上都是偏后的">
+<meta property="og:image" content="http://isux.tencent.com/wp-content/uploads/2015/12/20151223204108331-590x337.png">
+<meta property="og:image" content="http://isux.tencent.com/wp-content/uploads/2015/12/20160113172239951.png">
+<meta property="og:image" content="http://isux.tencent.com/wp-content/uploads/2015/12/20160113181504658.png">
+<meta property="og:image" content="http://mat1.gtimg.com/www/mb/images/face/36.gif">
+<meta property="og:image" content="http://isux.tencent.com/wp-content/uploads/2015/12/20151221150833418.png">
+<meta property="og:image" content="http://isux.tencent.com/wp-content/uploads/2015/12/20151221151623905.png">
+<meta property="og:image" content="http://isux.tencent.com/wp-content/uploads/2015/12/20151222142540703.png">
+<meta property="og:image" content="http://isux.tencent.com/wp-content/uploads/2015/12/20151222142805210.png">
+<meta property="og:image" content="http://isux.tencent.com/wp-content/uploads/2015/12/20151221154020659.png">
+<meta property="og:image" content="http://isux.tencent.com/wp-content/uploads/2015/12/2015122214303373.png">
+<meta property="og:image" content="http://isux.tencent.com/wp-content/uploads/2015/12/20151221155007578.png">
+<meta property="og:image" content="http://isux.tencent.com/wp-content/uploads/2015/12/20151221161323875.png">
+<meta property="og:image" content="http://isux.tencent.com/wp-content/uploads/2015/12/20151221162536141.png">
+<meta property="og:image" content="http://isux.tencent.com/wp-content/uploads/2015/12/20151221162606553.png">
+<meta property="og:image" content="http://isux.tencent.com/wp-content/uploads/2015/12/20151221161027795.gif">
+<meta property="og:image" content="http://mat1.gtimg.com/www/mb/images/face/1.gif">
+<meta property="og:image" content="http://mat1.gtimg.com/www/mb/images/face/14.gif">
+<meta property="og:updated_time" content="2016-01-29T06:39:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HuaHua's Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="顺势而为，HTML发展与UI组件设计进化">
+<meta name="twitter:description" content="转自(http://isux.tencent.com/development-of-ui-components-based-on-native-html.html)
+
+在阅读本文之前，建议先阅读之前的一篇文章：“面向设计的半封装web组件开发”，便于理解文章的一些解惑。
+一、现状1. 前端发展现状
+前端这几年的发展都是有目共睹的，然而，如果按照已经落地投入实践的标准梳理下，会发现，基本上都是偏后的">
   
     <link rel="alternative" href="/atom.xml" title="HuaHua&#39;s Blog" type="application/atom+xml">
   
@@ -188,9 +218,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-顺势而为，HTML发展与UI组件设计进化" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-顺势而为，HTML发展与UI组件设计进化" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/01/29/顺势而为，HTML发展与UI组件设计进化/" class="article-date">
@@ -206,12 +234,27 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/29/顺势而为，HTML发展与UI组件设计进化/">顺势而为，HTML发展与UI组件设计进化</a>
+    <h1 class="article-title" itemprop="name">
+      顺势而为，HTML发展与UI组件设计进化
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端相关/">前端相关</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -430,473 +473,62 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端相关/">前端相关</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/01/28/省时的浏览器同步测试工具/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">省时的浏览器同步测试工具</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
-
-
-
-
-
-  
-    <article id="post-省时的浏览器同步测试工具" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/01/28/省时的浏览器同步测试工具/" class="article-date">
-  	<time datetime="2016-01-27T16:00:00.000Z" itemprop="datePublished">2016-01-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/28/省时的浏览器同步测试工具/">省时的浏览器同步测试工具</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天无意中发现一个好玩的插件 <code>Browsersync</code><br>能很好的结合构建工具 <code>gulp</code> 和 <code>grunt</code>。</p>
-<p>Browsersync能让浏览器实时、快速响应您的文件更改（html、js、css、sass、less等）并自动刷新页面。更重要的是 Browsersync可以同时在PC、平板、手机等设备下进项调试。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
-	</div>
 
 
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/28/省时的浏览器同步测试工具/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="顺势而为，HTML发展与UI组件设计进化" data-title="顺势而为，HTML发展与UI组件设计进化" data-url="http://huahua2.github.io/2016/01/29/顺势而为，HTML发展与UI组件设计进化/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"lghua"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
 
-
-
-
-  
-    <article id="post-js闭包使用场景" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/01/27/js闭包使用场景/" class="article-date">
-  	<time datetime="2016-01-26T16:00:00.000Z" itemprop="datePublished">2016-01-27</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/27/js闭包使用场景/">js闭包使用场景</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我们来看看闭包的用途。事实上，通过使用闭包，我们可以做很多事情。比如模拟面向对象的代码风格；更优雅，更简洁的表达出代码；在某些方面提升代码的执行效率。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/27/js闭包使用场景/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-路漫漫其修远兮" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/08/12/路漫漫其修远兮/" class="article-date">
-  	<time datetime="2015-08-12T03:25:00.000Z" itemprop="datePublished">2015-08-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/12/路漫漫其修远兮/">路漫漫其修远兮</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前端的路遥远而精彩，当你的脚步跟不上你的灵魂时，<Br>就应该静下心来学习, 收藏一张前端开发知识网络图。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/日志/">日志</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/08/12/路漫漫其修远兮/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-PageSlide" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/08/07/PageSlide/" class="article-date">
-  	<time datetime="2015-08-07T01:23:00.000Z" itemprop="datePublished">2015-08-07</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/07/PageSlide/">PagesSlide</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="PageSlide介绍">PageSlide介绍</h3><p>用纯CSS3实现页面切换滑动效果，底部切换使用的radio实现选中效果,图标采用的font-face,切换页面<br>后标题和简介有上下淡出和左右淡出两种效果。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/项目实战/">项目实战</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/08/07/PageSlide/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-web app之meta" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/08/05/web app之meta/" class="article-date">
-  	<time datetime="2015-08-05T14:44:00.000Z" itemprop="datePublished">2015-08-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/05/web app之meta/">web app之meta</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="meta标签">meta标签</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=device-width, initial-scale=1, user-scalable=no, minimal-ui"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"apple-mobile-web-app-capable"</span> <span class="attribute">content</span>=<span class="value">"yes"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"apple-mobile-web-app-status-bar-style"</span> <span class="attribute">content</span>=<span class="value">"black"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"format-detection"</span><span class="value">content="telephone=no,</span> <span class="attribute">email</span>=<span class="value">no"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webapp/">webapp</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/08/05/web app之meta/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-css3-background" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/08/05/css3-background/" class="article-date">
-  	<time datetime="2015-08-05T13:50:00.000Z" itemprop="datePublished">2015-08-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/05/css3-background/">css3的background属性</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>css3的background属性</p>
-<p>用图片作为背景平铺，以封面形式展示</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.main-wrapper</span><span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"><span class="hexcolor">#444</span> <span class="function">url</span>(../img/bg.jpg)</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">background-attachment</span>:<span class="value">fixed</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">background-repeat</span>:<span class="value">no-repeat</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">background-size</span>:<span class="value">cover</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value">center center</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-解决Git push时重复输入用户名密码的问题" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/08/03/解决Git push时重复输入用户名密码的问题/" class="article-date">
-  	<time datetime="2015-08-02T16:00:00.000Z" itemprop="datePublished">2015-08-03</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/03/解决Git push时重复输入用户名密码的问题/">解决Git push时重复输入用户名密码的问题</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在windows上使用git来push到github服务器的时候，每次都需要填写用户名/邮箱、密码，很麻烦。最近用hexo写博客，需要频繁的push，每次执行hexo deploy都需要输入用户名、密码验证，不胜其烦，以下方法可以解决。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/08/03/解决Git push时重复输入用户名密码的问题/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -920,8 +552,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
